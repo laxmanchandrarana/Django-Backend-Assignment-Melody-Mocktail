@@ -134,7 +134,7 @@ Follow these steps to test your Django API using **Postman**.
 
 **Expected Result:**  
 A **201 Created** response with the submitted redirect data.
-
+![image](https://github.com/user-attachments/assets/56c372d9-a619-42d7-95c4-7f1aa968e4de)
 ---
 
 #### **B. Retrieve All Redirects (GET Request)**
@@ -146,6 +146,7 @@ A **201 Created** response with the submitted redirect data.
 
 **Expected Result:**  
 A **200 OK** response with all redirect objects in JSON format.
+![image](https://github.com/user-attachments/assets/75e3c6b9-89b6-4ac1-a492-fa9e567e665f)
 
 ---
 
@@ -156,17 +157,21 @@ A **200 OK** response with all redirect objects in JSON format.
 
 **Filter by Active Status:**
 - **URL:** `http://127.0.0.1:8000/api/redirects/?is_active=true`
+![image](https://github.com/user-attachments/assets/42853d46-dc01-4c42-a6da-127bec78928a)
 
 **Filter by Availability:**
 - **URL:** `http://127.0.0.1:8000/api/redirects/?availability=web_only`
+![image](https://github.com/user-attachments/assets/7a268bcc-9c4b-4471-9e86-fa21aec5b691)
 
 **Sort by Position:**
 - **URL:** `http://127.0.0.1:8000/api/redirects/?ordering=position`
+![image](https://github.com/user-attachments/assets/f47028df-7d94-49a3-859a-86d4b5f7f79f)
 
 3. Click **Send**.
 
 **Expected Result:**  
 The response should contain filtered or sorted results based on your query.
+![image](https://github.com/user-attachments/assets/117c1f18-0ebf-44de-ab9e-8b3f0aaef6ec)
 
 ---
 
@@ -181,7 +186,7 @@ The response should contain filtered or sorted results based on your query.
      ```json
      {
        "title_web": "Updated Web Title",
-       "position": 2,
+       "position": 1000,
        "is_active": false
      }
      ```
@@ -190,6 +195,7 @@ The response should contain filtered or sorted results based on your query.
 
 **Expected Result:**  
 A **200 OK** response with the updated redirect data.
+![image](https://github.com/user-attachments/assets/cff3a4e2-caa3-4e95-a47e-25cde12968d5)
 
 ---
 
@@ -203,6 +209,7 @@ A **200 OK** response with the updated redirect data.
 
 **Expected Result:**  
 A **204 No Content** response, indicating successful deletion.
+![image](https://github.com/user-attachments/assets/2210b670-0ac1-42ea-844e-a3ddfd2958c5)
 
 ---
 
