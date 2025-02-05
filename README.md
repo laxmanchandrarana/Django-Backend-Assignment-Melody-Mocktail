@@ -252,6 +252,26 @@ A **204 No Content** response, indicating successful deletion.
 This project fulfills all the requirements of the Django Backend Assignment for the internship application. 🚀
 
 ---
+## 🔗 Connect with Me
+
+<p align="left">
+  <a href="https://[LinkedIn](https://www.linkedin.com/in/laxmanchrana/)" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  
+  <a href="[https://www.instagram.com/your-instagram-handle](https://www.instagram.com/laxmanchandrarana/)" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+
+  <a href="https://yourwebsite.com" target="_blank">
+    <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Website">
+  </a>
+
+  <a href="mailto:youremail@example.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+</p>
+
 
 **Author:** *Laxman Chandra Rana*  
 **GitHub:** [https://github.com/laxmanchandrarana](https://github.com/laxmanchandrarana)  
