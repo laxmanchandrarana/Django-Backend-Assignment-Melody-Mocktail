@@ -1,4 +1,3 @@
-```markdown
 # 📱 Django Phone Redirect API
 
 This Django REST API provides **CRUD** functionality for managing redirect objects with image uploads, filtering, sorting, and robust validation. It supports redirects for both web and phone, with flexible availability options and position-based ordering.
