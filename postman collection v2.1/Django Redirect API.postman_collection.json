@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Get All Redirects",
+			"name": "Create Redirect",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -110,7 +110,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/redirects/?is_active=true&availability=web_only&ordering=position",
+					"raw": "http://127.0.0.1:8000/api/redirects/?is_active=true&availability=web_only",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -135,7 +135,8 @@
 						},
 						{
 							"key": "ordering",
-							"value": "position"
+							"value": "position",
+							"disabled": true
 						}
 					]
 				}
@@ -149,13 +150,38 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title_web\": \"Updated Web Title\",\r\n  \"title_phone\": \"Updated Phone Title\",\r\n  \"position\": 2,\r\n  \"is_active\": false,\r\n  \"availability\": \"web_only\",\r\n  \"redirect_url_web\": \"http://example.com/updated-web\",\r\n  \"redirect_url_phone\": \"http://example.com/updated-phone\"\r\n}",
+					"raw": "{\r\n  \"title_web\": \"Updated Web Title\",\r\n  \"title_phone\": \"Updated Phone Title\",\r\n  \"position\": 1000,\r\n  \"is_active\": false,\r\n  \"availability\": \"web_only\",\r\n  \"redirect_url_web\": \"http://example.com/updated-web\",\r\n  \"redirect_url_phone\": \"http://example.com/updated-phone\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/redirects/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"redirects",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Redirect",
+			"request": {
+				"method": "DELETE",
+				"header": [],
 				"url": {
 					"raw": "http://127.0.0.1:8000/api/redirects/1/",
 					"protocol": "http",
