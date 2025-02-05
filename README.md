@@ -1,5 +1,3 @@
-Here’s the complete `README.md` code ready for your GitHub repository:
-
 ```markdown
 # 📱 Django Phone Redirect API
 
