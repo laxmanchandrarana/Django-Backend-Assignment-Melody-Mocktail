@@ -21,7 +21,7 @@ This Django REST API provides **CRUD** functionality for managing redirect objec
 
 ### 1. **Clone the Repository**
 ```bash
-git clone <YOUR_GITHUB_REPO_URL>
+git clone https://github.com/laxmanchandrarana/Django-Backend-Assignment-Melody-Mocktail.git
 cd phone_redirect_api
 ```
 
@@ -180,8 +180,8 @@ This project fulfills all the requirements of the Django Backend Assignment for 
 
 ---
 
-**Author:** *[Your Name]*  
-**GitHub:** *[Your GitHub Profile Link]*  
+**Author:** *Laxman Chandra Rana*  
+**GitHub:** *(https://github.com/laxmanchandrarana)*  
 ```
 
 ---
