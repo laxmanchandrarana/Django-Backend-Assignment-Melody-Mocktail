@@ -1,3 +1,4 @@
+```markdown
 # 📱 Django Phone Redirect API
 
 This Django REST API provides **CRUD** functionality for managing redirect objects with image uploads, filtering, sorting, and robust validation. It supports redirects for both web and phone, with flexible availability options and position-based ordering.
@@ -92,52 +93,117 @@ python manage.py test
 ```
 ![image](https://github.com/user-attachments/assets/205c7ccd-48c9-4996-8c94-724b84792465)
 
-### **Test API with Postman or cURL**
+---
 
-#### 1. **Create a Redirect (POST)**
-```bash
-curl -X POST http://127.0.0.1:8000/api/redirects/ \
-  -F "title_web=New Web" \
-  -F "title_phone=New Phone" \
-  -F "position=1" \
-  -F "is_active=true" \
-  -F "availability=both" \
-  -F "redirect_url_web=http://example.com/web" \
-  -F "redirect_url_phone=http://example.com/phone" \
-  -F "image_web=@/path/to/web_image.jpg" \
-  -F "image_phone=@/path/to/phone_image.jpg"
-```
+## 📬 Testing API with Postman
 
-#### 2. **Get Redirects (GET)**
-```bash
-curl -X GET http://127.0.0.1:8000/api/redirects/
-```
+Follow these steps to test your Django API using **Postman**.
 
-#### 3. **Filter Redirects (GET)**
-- **Filter by Active Status**:
-```bash
-curl -X GET "http://127.0.0.1:8000/api/redirects/?is_active=true"
-```
-- **Filter by Availability**:
-```bash
-curl -X GET "http://127.0.0.1:8000/api/redirects/?availability=web_only"
-```
-- **Sort by Position**:
-```bash
-curl -X GET "http://127.0.0.1:8000/api/redirects/?ordering=position"
-```
+### **1. Setup Postman**
 
-#### 4. **Update a Redirect (PUT)**
-```bash
-curl -X PUT http://127.0.0.1:8000/api/redirects/1/ \
-  -H "Content-Type: application/json" \
-  -d '{"title_web": "Updated Web", "position": 2, "is_active": false}'
-```
+1. Download and install Postman: [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
+2. Launch Postman and create a new collection named **"Django Redirect API"**.
 
-#### 5. **Delete a Redirect (DELETE)**
-```bash
-curl -X DELETE http://127.0.0.1:8000/api/redirects/1/
-```
+---
+
+### **2. CRUD Operations**
+
+---
+
+#### **A. Create a Redirect (POST Request)**
+
+1. Click **New** > **Request**.
+2. Name it **"Create Redirect"** and save it to your collection.
+3. Select **POST** as the method.
+4. **URL:** `http://127.0.0.1:8000/api/redirects/`
+5. Go to the **Body** tab:
+   - Select **form-data**.
+   - Add the following fields:
+     | Key               | Value                             | Type  |
+     |-------------------|-----------------------------------|-------|
+     | title_web         | My Web Title                      | Text  |
+     | title_phone       | My Phone Title                    | Text  |
+     | position          | 1                                 | Text  |
+     | is_active         | true                              | Text  |
+     | availability      | both                              | Text  |
+     | redirect_url_web  | http://example.com/web            | Text  |
+     | redirect_url_phone| http://example.com/phone          | Text  |
+     | image_web         | *(Select an image file)*          | File  |
+     | image_phone       | *(Select an image file)*          | File  |
+
+6. Click **Send**.
+
+**Expected Result:**  
+A **201 Created** response with the submitted redirect data.
+
+---
+
+#### **B. Retrieve All Redirects (GET Request)**
+
+1. Create a new request named **"Get All Redirects"**.
+2. Select **GET** as the method.
+3. **URL:** `http://127.0.0.1:8000/api/redirects/`
+4. Click **Send**.
+
+**Expected Result:**  
+A **200 OK** response with all redirect objects in JSON format.
+
+---
+
+#### **C. Filter Redirects (GET with Query Parameters)**
+
+1. Clone the **"Get All Redirects"** request or create a new one.
+2. Select **GET** as the method.
+
+**Filter by Active Status:**
+- **URL:** `http://127.0.0.1:8000/api/redirects/?is_active=true`
+
+**Filter by Availability:**
+- **URL:** `http://127.0.0.1:8000/api/redirects/?availability=web_only`
+
+**Sort by Position:**
+- **URL:** `http://127.0.0.1:8000/api/redirects/?ordering=position`
+
+3. Click **Send**.
+
+**Expected Result:**  
+The response should contain filtered or sorted results based on your query.
+
+---
+
+#### **D. Update a Redirect (PATCH Request)**
+
+1. Create a new request named **"Update Redirect"**.
+2. Select **PATCH** as the method.
+3. **URL:** `http://127.0.0.1:8000/api/redirects/1/` *(Replace `1` with the actual ID)*
+4. Go to the **Body** tab:
+   - Select **raw** and choose **JSON**.
+   - Enter the following:
+     ```json
+     {
+       "title_web": "Updated Web Title",
+       "position": 2,
+       "is_active": false
+     }
+     ```
+
+5. Click **Send**.
+
+**Expected Result:**  
+A **200 OK** response with the updated redirect data.
+
+---
+
+#### **E. Delete a Redirect (DELETE Request)**
+
+1. Create a new request named **"Delete Redirect"**.
+2. Select **DELETE** as the method.
+3. **URL:** `http://127.0.0.1:8000/api/redirects/1/` *(Replace `1` with the actual ID)*
+
+4. Click **Send**.
+
+**Expected Result:**  
+A **204 No Content** response, indicating successful deletion.
 
 ---
 
@@ -148,7 +214,7 @@ curl -X DELETE http://127.0.0.1:8000/api/redirects/1/
 | GET    | `/api/redirects/`            | Retrieve all redirects           |
 | POST   | `/api/redirects/`            | Create a new redirect            |
 | GET    | `/api/redirects/<id>/`       | Retrieve a specific redirect     |
-| PUT    | `/api/redirects/<id>/`       | Update a specific redirect       |
+| PATCH  | `/api/redirects/<id>/`       | Update a specific redirect       |
 | DELETE | `/api/redirects/<id>/`       | Delete a specific redirect       |
 
 ---
@@ -159,7 +225,7 @@ curl -X DELETE http://127.0.0.1:8000/api/redirects/1/
 - **Django REST Framework** - API development
 - **MySQL** - Relational database
 - **Pillow** - Image processing
-- **Postman / cURL** - API testing
+- **Postman** - API testing
 - **Unit Tests** - API test coverage with Django’s testing framework
 
 ---
@@ -182,5 +248,5 @@ This project fulfills all the requirements of the Django Backend Assignment for 
 ---
 
 **Author:** *Laxman Chandra Rana*  
-**GitHub:** *(https://github.com/laxmanchandrarana)*  
+**GitHub:** [https://github.com/laxmanchandrarana](https://github.com/laxmanchandrarana)  
 ```

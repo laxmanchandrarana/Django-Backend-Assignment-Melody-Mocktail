@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "f626b669-2144-4b26-a709-c2bc2297eaa8",
+		"name": "Django Redirect API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29576825"
+	},
+	"item": [
+		{
+			"name": "Get All Redirects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title_web",
+							"value": "My Web Title",
+							"type": "text"
+						},
+						{
+							"key": "title_phone",
+							"value": "My Phone Title\t",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "is_active",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "availability",
+							"value": "web_only",
+							"type": "text"
+						},
+						{
+							"key": "redirect_url_web",
+							"value": "http://example.com/web",
+							"type": "text"
+						},
+						{
+							"key": "redirect_url_phone",
+							"value": "http://example.com/phone",
+							"type": "text"
+						},
+						{
+							"key": "image_web",
+							"type": "file",
+							"src": "postman-cloud:///1efe3f7f-4863-4c80-88a2-89bbb6e36730"
+						},
+						{
+							"key": "image_phone",
+							"type": "file",
+							"src": "postman-cloud:///1efe3f7f-edd5-44c0-bd19-4ae0ab81d32e"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/redirects/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"redirects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Redirects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/redirects/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"redirects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Redirects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/redirects/?is_active=true&availability=web_only&ordering=position",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"redirects",
+						""
+					],
+					"query": [
+						{
+							"key": "is_active",
+							"value": "true"
+						},
+						{
+							"key": "availability",
+							"value": "web_only"
+						},
+						{
+							"key": "ordering",
+							"value": "position"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title_web\": \"Updated Web Title\",\r\n  \"title_phone\": \"Updated Phone Title\",\r\n  \"position\": 2,\r\n  \"is_active\": false,\r\n  \"availability\": \"web_only\",\r\n  \"redirect_url_web\": \"http://example.com/updated-web\",\r\n  \"redirect_url_phone\": \"http://example.com/updated-phone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/redirects/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"redirects",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

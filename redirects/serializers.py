@@ -2,6 +2,9 @@ from rest_framework import serializers
 from .models import Redirect
 
 class RedirectSerializer(serializers.ModelSerializer):
+    # Make image fields optional for updates
+    image_phone = serializers.ImageField(required=False)
+    image_web = serializers.ImageField(required=False)
     
     def validate_position(self, value):
         """
