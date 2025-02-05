@@ -90,6 +90,7 @@ Visit the Admin panel at: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/ad
 ```bash
 python manage.py test
 ```
+![image](https://github.com/user-attachments/assets/205c7ccd-48c9-4996-8c94-724b84792465)
 
 ### **Test API with Postman or cURL**
 
@@ -183,13 +184,3 @@ This project fulfills all the requirements of the Django Backend Assignment for 
 **Author:** *Laxman Chandra Rana*  
 **GitHub:** *(https://github.com/laxmanchandrarana)*  
 ```
-
----
-
-### **What to Do Next:**
-
-1. **Replace** `<YOUR_GITHUB_REPO_URL>` with your repository URL.
-2. **Customize** the **Author** and **GitHub** sections with your name and profile link.
-3. **Optional:** Add screenshots or API response examples if you'd like to make it more visually appealing.
-
-You're all set to submit this polished project! 🚀 Let me know if you need further tweaks or help with anything else. 💪
