@@ -249,7 +249,7 @@ A **204 No Content** response, indicating successful deletion.
 
 ## 🔗 Submission
 
-This project fulfills all the requirements of the Django Backend Assignment for the internship application. 🚀
+This project fulfills all the requirements of the Django Backend Assignment. 🚀
 
 ---
 ## 🔗 Connect with Me
