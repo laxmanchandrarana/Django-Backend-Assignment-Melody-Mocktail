@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-okoav_zl_=0#dy0em3ho-=51bk!!jenr#6twy^=-!h9p7o@9+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "django-backend-assignment-melody.onrender.com",  # Add your Render domain
+]
+
 
 
 # Application definition
