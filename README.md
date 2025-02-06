@@ -135,6 +135,7 @@ Follow these steps to test your Django API using **Postman**.
 **Expected Result:**  
 A **201 Created** response with the submitted redirect data.
 ![image](https://github.com/user-attachments/assets/56c372d9-a619-42d7-95c4-7f1aa968e4de)
+
 ---
 
 #### **B. Retrieve All Redirects (GET Request)**
