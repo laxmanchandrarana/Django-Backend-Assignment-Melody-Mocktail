@@ -226,6 +226,36 @@ A **204 No Content** response, indicating successful deletion.
 
 ---
 
+## 🧪 Unit Tests for APIs (Bonus)
+
+This project includes **unit tests** to ensure API reliability and correctness. The test suite verifies:
+- **CRUD operations** for redirects.
+- **Image upload handling**.
+- **Filtering and sorting functionality**.
+- **Validation checks** for required fields.
+
+### **Run Unit Tests**
+To execute all unit tests, run the following command:
+```bash
+python manage.py test
+```
+
+### **Example Test Output**
+```bash
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.452s
+
+OK
+Destroying test database for alias 'default'...
+```
+
+The tests ensure that the API behaves as expected. 🛡️✅
+
+---
+
 ## 🛡️ Technologies Used
 
 - **Django** - Web framework
